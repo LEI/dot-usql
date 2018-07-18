@@ -6,4 +6,4 @@ role:
   link:
     - ".usqlrc"
   post_install:
-    - "test ! -f ~/.usqlpass && (echo '# protocol:host:port:dbname:user:pass' > ~/.usqlpass) && chmod 0600 ~/.usqlpass"
+    - "if test ! -f ~/.usqlpass; then echo '# protocol:host:port:dbname:user:pass' > ~/.usqlpass; chmod 0600 ~/.usqlpass; fi"
